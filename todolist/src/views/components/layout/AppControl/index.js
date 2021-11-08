@@ -7,7 +7,7 @@ const AppControl = ()=> {
     const ClassStyle = AppControlStyle();
     return(
        <div>
-            <Grid container spacing={2} className={ClassStyle.root}>
+            <Grid container spacing={2} className={clsx(ClassStyle.root)}>
                         <Grid item xs={3} >
                             <List
                             className="bg-primary-light" 

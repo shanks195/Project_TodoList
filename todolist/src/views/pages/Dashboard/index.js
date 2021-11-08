@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 
 import DashboardStyle from './style';
 import clsx from 'clsx';
-import { BrowserRouter as Link, Outlet } from "react-router-dom";
+import { BrowserRouter as  Outlet } from "react-router-dom";
 const Dashboard = ()=> {
     const ClassStyle =DashboardStyle();
     return (
@@ -11,7 +11,7 @@ const Dashboard = ()=> {
                 <Grid container spacing={2}>
                     <Grid>
                         <Outlet/>
-                        <h2>DashBoard</h2>
+                        {/* <h2>DashBoard</h2> */}
                     </Grid>
                  
                 </Grid>

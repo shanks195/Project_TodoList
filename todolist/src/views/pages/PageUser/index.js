@@ -1,10 +1,13 @@
 import * as React from 'react';
-import PageUserStyle from './style';
 import clsx from 'clsx';
+import tableuser from './tableuser';
+import PageUserStyle from './style';
 const PageUser = ()=> {
     const ClassStyle = PageUserStyle();
     return(
-        <div className={clsx(ClassStyle.root)}>Hello page user</div>
+        <div className={clsx(ClassStyle.root)}>
+            <tableuser/>
+        </div>
     )
 }
 export  default PageUser;
