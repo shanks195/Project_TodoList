@@ -3,6 +3,10 @@ import tableUserStyle from './style';
 import clsx from 'clsx';
 const TableUser = () => {
     const ClassStyle = tableUserStyle();
+    const DataTable = {
+
+        
+    }
     return ( 
     <div class={clsx(ClassStyle.root)}>
          <table  className='content-table'>
