@@ -1,9 +1,11 @@
 import * as React from 'react';
 import tableUserStyle from './style';
 import clsx from 'clsx';
-const tableuser = () => {
+const TableUser = () => {
     const ClassStyle = tableUserStyle();
-    return ( <table class={clsx(ClassStyle.root),'content-table'}>
+    return ( 
+    <div class={clsx(ClassStyle.root)}>
+         <table  className='content-table'>
                 <thead>
                     <tr>
                     <th>Rank</th>
@@ -33,6 +35,8 @@ const tableuser = () => {
                     </tr>
                 </tbody>
         </table>
+    </div>
+   
     )
 }
-export default tableuser;
+export default TableUser;

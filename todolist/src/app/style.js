@@ -51,8 +51,12 @@ const AppStyle = makeStyles(() => ({
         paddingRight: '1rem'
       },
       '& main':  {
-          marginTop:'95px',
+          position:'absolute',
+          top:116,
+          left:348,
           padding:'2rem 1.5rem',
+          minWidth:706,
+          height:'100%',
           backgroundColor: '#f1f5f9',
           minHeight: 'calc(100vh-90px)' 
         },  

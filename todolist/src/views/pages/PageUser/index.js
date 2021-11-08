@@ -1,12 +1,12 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import tableuser from './tableuser';
+import TableUser from './TableUser/index';
 import PageUserStyle from './style';
 const PageUser = ()=> {
     const ClassStyle = PageUserStyle();
     return(
         <div className={clsx(ClassStyle.root)}>
-            <tableuser/>
+            <TableUser/>
         </div>
     )
 }
