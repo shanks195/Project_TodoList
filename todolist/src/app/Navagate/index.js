@@ -1,24 +1,17 @@
 import * as React from 'react';
 import clsx from 'clsx';
 import NavigateStyle from './style';
+import Item from './Item';
 const Navigate = ()=> {
     const ClassStyle = NavigateStyle();
     return <div className={clsx(ClassStyle.root)}>
          <div class="sidebar-menu">
       <ul>
      
-        <li>
-          <a href="/" class="active">
-            <i class="fa fa-dashboard"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="/user">
-            <i class="fa fa-rss"></i>
-            <span>User</span>
-          </a>
-        </li>
+       
+        <Item classactive="active" classname="fa fa-dashboard" href="/" name="Dashboard"/>
+        
+        <Item classname="fa fa-rss" href="/user" name="List User"/>
       </ul>
     </div>
     </div>
