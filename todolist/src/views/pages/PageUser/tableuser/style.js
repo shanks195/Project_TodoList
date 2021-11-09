@@ -21,6 +21,7 @@ const tableUserStyle = makeStyles(()=> ({
   },
   
   '& .content-table th':{
+    textTransform: "uppercase",
     padding: '12px 15px'
   },
   '& .content-table td': {

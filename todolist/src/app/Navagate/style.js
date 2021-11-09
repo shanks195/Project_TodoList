@@ -3,6 +3,7 @@ const NavigateStyle = makeStyles(() => ({
     root: {
       
 '& .sidebar-menu li': {
+    listStyle: "none",
     width: '100%',
     marginBottom: '1.7rem',
    

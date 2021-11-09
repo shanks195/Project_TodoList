@@ -22,7 +22,7 @@
   },
   "scripts": {
     "server": "nodemon server.js",
-    "client":"set port=8080 && react-scripts start",
+    "client": "set port=8080 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -37,7 +37,7 @@ const AppStyle = makeStyles(() => ({
         padding:'1rem 1.5rem',
         position: 'fixed',
         /* left: 345px; */
-        width: '77%',
+        width: '90%',
         boxShadow: '2px 2px 5px rgba(0,0, 0, 2)',
         top:0,
         zIndex: 100,
@@ -54,11 +54,10 @@ const AppStyle = makeStyles(() => ({
           position:'absolute',
           top:116,
           left:348,
+          minWidth:'1520px',
           padding:'2rem 1.5rem',
-          minWidth:706,
           height:'100%',
-          backgroundColor: '#f1f5f9',
-          minHeight: 'calc(100vh-90px)' 
+          backgroundColor: '#f1f5f9'
         },  
       }     
       
