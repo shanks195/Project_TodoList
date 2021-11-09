@@ -1,53 +1,67 @@
 import { makeStyles } from "@mui/styles";
 
-const tableUserStyle = makeStyles(()=> ({
+const tableUserStyle = makeStyles(
+  ()=> ({
     root:   {
-        
-'& .content-table': {
-    borderCollapse: 'collapse',
-    margin: '25px 0',
-    fontSize: '0.9em',
-    minWidth: '400px',
-    borderRadius: '5px 5px 0 0',
-    overflow: 'hidden',
-    boxShadow: '0 0 20px rgba(0, 0, 0, 0.15)'
-  },
-  
-  '& .content-table thead tr' :{
-    backgroundColor: 'var(--primary-main)',
-    color: '#ffffff',
-    textAlign: 'left',
-    fontWeight: 'bold'
-  },
-  
-  '& .content-table th':{
-    textTransform: "uppercase",
-    padding: '12px 15px'
-  },
-  '& .content-table td': {
-    padding: '12px 15px'
-  },
-  
-  '& .content-table tbody tr': {
-    borderBottom: '1px solid #efefef',
-    backgroundColor:'pink',
-  },
-  
-  '& .content-table tbody tr:nth-of-type(even)': {
-    backgroundColor: 'brown',
-    color:'white',
-  },
-  
- '&  .content-table tbody tr:last-of-type': {
-    borderBottom: '2px solid #009879',
-  },
-  
-  '& .content-table': {
-    borderBottom: '2px solid var(--primary-main)',
-    fontWeight: 'bold',
-    color: 'var(--primary-main)',
+
+      '& .table':{
+        width: '100%',
+        borderCollapse: 'collapse'
+      },
+
+'& .table td,.table th':{
+  padding:'12px 15px',
+  border:'1px solid #ddd',
+  textAlign: 'center',
+  fontSize:'16px'
+},
+'& .table th':{
+	backgroundColor: 'darkblue',
+  fontSize:'14px',
+  textTransform:'uppercase',
+	color:'#ffffff',
+},
+
+'& .table tbody tr:nth-child(even)':{
+	backgroundColor: '#f5f5f5',
+},
+"& .user img": {
+  width:'20px',
+  height:'20px',
+  borderRadius:"50%"
+},
+/*responsive*/
+
+'@media(max-width: 500px)':{
+	'& .table thead': {
+		display: 'none'
+	},
+
+	'& .table, .table tbody, .table tr, .table td':{
+		display: 'block',
+		width: '100%'
+	},
+	'& .table tr':{
+		marginBottom:'15px'
+	},
+	'&.table td':{
+		textAlign: 'right',
+		paddingLeft: '50%',
+		textAlign: 'right',
+		position: 'relative',
+	},
+	'& .table td::before':{
+		content: 'attr(data-label)',
+		position: 'absolute',
+		left:0,
+		width: '50%',
+		paddingLeft:'15px',
+		fontSize:'15px',
+		fontWeight: 'bold',
+		textAlign: 'left'
   }
-  
+}
     }
-}));
+  }
+));
 export default tableUserStyle;

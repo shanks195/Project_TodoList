@@ -47,11 +47,11 @@ function App() {
                        
                       </h1>
                     </header>
-                    <main>
+                    <Grid spacing={2} className="main">
                         <Routes path="/" element={<Dashboard/>}>
                           <Route path="/user" element={<PageUser/>}/>      
                         </Routes>
-                    </main>
+                    </Grid>
                 </div>
               </div>
               

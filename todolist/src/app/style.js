@@ -1,6 +1,7 @@
 import {makeStyles} from '@mui/styles';
-const AppStyle = makeStyles(() => ({
+const AppStyle = makeStyles((theme) => ({
     root: {
+      
       "& .sidebar": {
         transition:' width 300ms',
         zIndex: 100,
@@ -50,14 +51,15 @@ const AppStyle = makeStyles(() => ({
         fontSize: '1.7rem',
         paddingRight: '1rem'
       },
-      '& main':  {
+      '& .main':  {
           position:'absolute',
           top:116,
           left:348,
           minWidth:'1520px',
           padding:'2rem 1.5rem',
           height:'100%',
-          backgroundColor: '#f1f5f9'
+          backgroundColor: '#f1f5f9',
+         
         },  
       }     
       

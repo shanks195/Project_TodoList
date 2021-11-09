@@ -1,6 +1,7 @@
 import * as React from 'react';
 import tableUserStyle from './style';
 import clsx from 'clsx';
+import Grid from '@mui/material/Grid';
 const TableUser = () => {
     const ClassStyle = tableUserStyle();
     const dataTables =  [
@@ -9,13 +10,8 @@ const TableUser = () => {
           "username": "admin",
           "email": "robocon87@gmail.com",
           "password": "T@an1995",
-          "avatar": "",
-          "coverImg": "",
+          "avatar": "https://source.unsplash.com/random",
           "phonenumber": "0902438743",
-          "friendIds": [],
-          "followingIds": [],
-          "follwerIds": [],
-          "detailList": [],
           "firstName": "To",
           "lastName": "Toan",
           "birthDay": "11/12/1995",
@@ -29,13 +25,8 @@ const TableUser = () => {
           "username": "customer",
           "email": "robocon87@gmail.com",
           "password": "T@an1995",
-          "avatar": "",
-          "coverImg": "",
+          "avatar": "https://source.unsplash.com/random",
           "phonenumber": "0902438743",
-          "friendIds": [],
-          "followingIds": [],
-          "follwerIds": [],
-          "detailList": [],
           "firstName": "To",
           "lastName": "Toan",
           "birthDay": "11/12/1995",
@@ -47,26 +38,31 @@ const TableUser = () => {
       ];
       const elmTable = dataTables.map((item,index) => 
                 <tr key={index}>
-                    <td>{item.id}</td>
-                    <td>{item.username}</td>
-                    <td>{item.email}</td>
-                    <td>{item.password}</td>
-                    <td>{item.phonenumber}</td>
-                    <td>{item.firstName}</td>
-                    <td>{item.lastName}</td>
-                    <td>{item.birthDay}</td>
-                    <td>{item.sex}</td>
-                    <td>{item.createdAt}</td>
-                    <td>{item.updatedAt}</td>  
-                    <td>
-                        <button className="btn-primary-light btn-size mr-2"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                        <button className='btn-primary-delete btn-size'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                    </td>  
+                        <td>{item.id}</td>
+                        <td>
+                            <div class="user">
+                                <img src={item.avatar} alt="" />
+                                <span>{item.username}</span>
+                            </div>
+                        </td>
+                        <td>{item.email}</td>
+                        <td>{item.password}</td>
+                        <td>{item.phonenumber}</td>
+                        <td>{item.firstName}</td>
+                        <td>{item.lastName}</td>
+                        <td>{item.birthDay}</td>
+                        <td>{item.sex}</td>
+                        <td>{item.createdAt}</td>
+                        <td>{item.updatedAt}</td>
+                        <td>
+                            <button className="btn-primary-light btn-size mr-2"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            <button className='btn-primary-delete btn-size'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        </td>  
                 </tr>
     );
     return ( 
-    <div class={clsx(ClassStyle.root)}>
-         <table  className='content-table'>
+    <Grid class={clsx(ClassStyle.root)}>
+         <table  className='table'>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -87,7 +83,7 @@ const TableUser = () => {
                     {elmTable}
                 </tbody>
         </table>
-    </div>
+    </Grid>
    
     )
 }
