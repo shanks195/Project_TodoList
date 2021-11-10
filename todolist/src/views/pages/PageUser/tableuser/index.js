@@ -2,11 +2,14 @@ import * as React from 'react';
 import tableUserStyle from './style';
 import clsx from 'clsx';
 import Grid from '@mui/material/Grid';
-const TableUser = () => {
+import { v4 as uuidv4 } from 'uuid';
+const TableUser = (props) => {
     const ClassStyle = tableUserStyle();
+    // const {index} =props;
+
     const dataTables =  [
         {
-          "id": 1,
+          "id": uuidv4(),
           "username": "admin",
           "email": "robocon87@gmail.com",
           "password": "T@an1995",
@@ -16,13 +19,14 @@ const TableUser = () => {
           "lastName": "Toan",
           "birthDay": "11/12/1995",
           "sex": "Male",
+          "role":1,
           "createdAt": "2021-10-30 03:04:15",
           "updatedAt": "2021-10-30 03:04:15",
        
         },
         {
-          "id": 2,
-          "username": "customer",
+          "id": uuidv4(),
+          "username": "customer 1",
           "email": "robocon87@gmail.com",
           "password": "T@an1995",
           "avatar": "https://source.unsplash.com/random",
@@ -31,14 +35,49 @@ const TableUser = () => {
           "lastName": "Toan",
           "birthDay": "11/12/1995",
           "sex": "Male",
+          "role":2,
           "createdAt": "2021-10-30 03:04:15",
           "updatedAt": "2021-10-30 03:04:15",
         
-        }
+        },
+        {
+            "id": uuidv4(),
+            "username": "poster",
+            "email": "robocon87@gmail.com",
+            "password": "T@an1995",
+            "avatar": "https://source.unsplash.com/random",
+            "phonenumber": "0902438743",
+            "firstName": "To",
+            "lastName": "Toan",
+            "birthDay": "11/12/1995",
+            "sex": "Male",
+            "role":3,
+            "createdAt": "2021-10-30 03:04:15",
+            "updatedAt": "2021-10-30 03:04:15",
+          
+          },
+          {
+            "id": uuidv4(),
+            "username": "customer 2",
+            "email": "robocon87@gmail.com",
+            "password": "T@an1995",
+            "avatar": "https://source.unsplash.com/random",
+            "phonenumber": "0902438743",
+            "firstName": "To",
+            "lastName": "Toan",
+            "birthDay": "11/12/1995",
+            "sex": "Male",
+            "role":2,
+            "createdAt": "2021-10-30 03:04:15",
+            "updatedAt": "2021-10-30 03:04:15",
+          
+          }
       ];
+    
+
       const elmTable = dataTables.map((item,index) => 
                 <tr key={index}>
-                        <td>{item.id}</td>
+                        <td>{index}</td>
                         <td>
                             <div class="user">
                                 <img src={item.avatar} alt="" />
@@ -52,11 +91,21 @@ const TableUser = () => {
                         <td>{item.lastName}</td>
                         <td>{item.birthDay}</td>
                         <td>{item.sex}</td>
+                        <td>{(()=>{
+                            let elmRule =<span>Poster</span>;
+                            if(item.role ===1) {
+                                elmRule = <span className="">Admin </span>
+                            }else if(item.role ===2) {
+                                elmRule = <span>Customer</span>
+                            }
+                            return elmRule;
+
+                        })()}</td>
                         <td>{item.createdAt}</td>
                         <td>{item.updatedAt}</td>
                         <td>
-                            <button className="btn-primary-light btn-size mr-2"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                            <button className='btn-primary-delete btn-size'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                            <button className="btn-primary-light btn-size mr-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                            <button className='btn-primary-delete btn-size'><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                         </td>  
                 </tr>
     );
@@ -74,6 +123,7 @@ const TableUser = () => {
                         <th>lastName</th>
                         <th>birthDay</th>
                         <th>sex</th>
+                        <th>role</th>
                         <th>created At</th>
                         <th>updated At</th>
                         <th>Actions</th>

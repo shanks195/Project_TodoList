@@ -5,7 +5,9 @@ import PageUserStyle from './style';
 import Grid from '@mui/material/Grid';
 import Search from '../../components/layout/search';
 import Sortby from '../../components/layout/Sortby';
-import { ButtonBase } from '../../components/layout/ButtonBase';
+import Add_user from '../../components/layout/Add_user';
+import TablePaginationCo from '../../components/base/TablePaginationCo';
+
 const PageUser = ()=> {
     const ClassStyle = PageUserStyle();
     
@@ -13,19 +15,20 @@ const PageUser = ()=> {
         <div className={clsx(ClassStyle.root)}>
             <h1>LIST USER</h1>
             <Grid>
-                <Grid  container spacing={2} >
+                <Grid  container  >
                     <Grid xs={2.5}>
                         <Search/>
                     </Grid>
-                    <Grid xs={3}>
+                    <Grid xs={2.5}>
                         <Sortby/>
                     </Grid>
-                    <Grid xs={3}>
-                        <ButtonBase/>
+                    <Grid xs={6.9} >
+                    <Add_user/>
                     </Grid>
                 </Grid>
                 <Grid xs={12}>
-                    <TableUser/>
+                    <TableUser />
+                    <TablePaginationCo/>
                 </Grid>
             </Grid>
            

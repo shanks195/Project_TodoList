@@ -13,6 +13,8 @@ const variableStyle = makeStyles((theme ) => ({
             "--secondary-dark": "#ba000d",
             "--secondary-constrastext":"#000",
             "--primary-light-white":"#b8bede",
+            "--primary-light-blue":"#4b83c8",
+            
             
 
             

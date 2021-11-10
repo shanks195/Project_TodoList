@@ -4,7 +4,8 @@ import Grid from '@mui/material/Grid';
 import DashboardStyle from './style';
 import clsx from 'clsx';
 import { BrowserRouter as  Outlet } from "react-router-dom";
-const Dashboard = ()=> {
+const Dashboard = (props)=> {
+  
     const ClassStyle =DashboardStyle();
     return (
           <Grid className={clsx(ClassStyle.root)}>
