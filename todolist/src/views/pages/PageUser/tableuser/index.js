@@ -76,38 +76,91 @@ const TableUser = (props) => {
     
 
       const elmTable = dataTables.map((item,index) => 
-                <tr key={index}>
-                        <td>{index}</td>
-                        <td>
-                            <div class="user">
-                                <img src={item.avatar} alt="" />
-                                <span>{item.username}</span>
-                            </div>
-                        </td>
-                        <td>{item.email}</td>
-                        <td>{item.password}</td>
-                        <td>{item.phonenumber}</td>
-                        <td>{item.firstName}</td>
-                        <td>{item.lastName}</td>
-                        <td>{item.birthDay}</td>
-                        <td>{item.sex}</td>
-                        <td>{(()=>{
-                            let elmRule =<span>Poster</span>;
+                <tbody key={index}>  
+                               {(()=>{
+                            let elmRule =
+                            <tr  className='w-100 bg-primary-dark'>
+                                       <td>{index}</td>
+                                    <td>
+                                        <div class="user">
+                                            <img src={item.avatar} alt="" />
+                                            <span>{item.username}</span>
+                                        </div>
+                                    </td>
+                                    <td>{item.email}</td>
+                                    <td>{item.password}</td>
+                                    <td>{item.phonenumber}</td>
+                                    <td>{item.firstName}</td>
+                                    <td>{item.lastName}</td>
+                                    <td>{item.birthDay}</td>
+                                    <td>{item.sex}</td>
+                                    <td>Poster</td>
+                                    <td>{item.createdAt}</td>
+                                    <td>{item.updatedAt}</td>
+                                    <td>
+                                        <button className="btn-primary-light btn-size mr-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                        <button className='btn-primary-delete btn-size'><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    </td> 
+                            </tr>
+                             
+                           
                             if(item.role ===1) {
-                                elmRule = <span className="">Admin </span>
+                                elmRule = 
+                                <tr className='w-100 bg-primary-red' >
+                                    <td>{index}</td>
+                                    <td>
+                                        <div class="user">
+                                            <img src={item.avatar} alt="" />
+                                            <span>{item.username}</span>
+                                        </div>
+                                    </td>
+                                    <td>{item.email}</td>
+                                    <td>{item.password}</td>
+                                    <td>{item.phonenumber}</td>
+                                    <td>{item.firstName}</td>
+                                    <td>{item.lastName}</td>
+                                    <td>{item.birthDay}</td>
+                                    <td>{item.sex}</td>
+                                    <td>Admin</td>
+                                    <td>{item.createdAt}</td>
+                                    <td>{item.updatedAt}</td>
+                                    <td>
+                                        <button className="btn-primary-light btn-size mr-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                        <button className='btn-primary-delete btn-size'><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    </td> 
+                                </tr>
                             }else if(item.role ===2) {
-                                elmRule = <span>Customer</span>
+                                elmRule = <tr  className="w-100 bg-secondary-light">
+                                <td>{index}</td>
+                                <td>
+                                    <div class="user">
+                                        <img src={item.avatar} alt="" />
+                                        <span>{item.username}</span>
+                                    </div>
+                                </td>
+                                <td>{item.email}</td>
+                                <td>{item.password}</td>
+                                <td>{item.phonenumber}</td>
+                                <td>{item.firstName}</td>
+                                <td>{item.lastName}</td>
+                                <td>{item.birthDay}</td>
+                                <td>{item.sex}</td>
+                                <td>Customer</td>
+                                <td>{item.createdAt}</td>
+                                <td>{item.updatedAt}</td>
+                                <td>
+                                    <button className="btn-primary-light btn-size mr-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button className='btn-primary-delete btn-size'><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </td> 
+                            </tr>
                             }
                             return elmRule;
 
-                        })()}</td>
-                        <td>{item.createdAt}</td>
-                        <td>{item.updatedAt}</td>
-                        <td>
-                            <button className="btn-primary-light btn-size mr-2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                            <button className='btn-primary-delete btn-size'><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                        </td>  
-                </tr>
+                        })()}
+                </tbody>
+             
+                       
+              
     );
     return ( 
     <Grid class={clsx(ClassStyle.root)}>
@@ -129,9 +182,7 @@ const TableUser = (props) => {
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {elmTable}
-                </tbody>
+                {elmTable}
         </table>
     </Grid>
    

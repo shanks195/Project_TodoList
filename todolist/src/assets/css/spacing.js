@@ -143,6 +143,9 @@ const spacingStyle = makeStyles((theme) => ({
         marginBottom: "16px",
       },
     },
+    "w-100": {
+      width:"100%"
+    },
     ".max-w-full": { maxWidth: "100%!important" },
     ".min-w-full": { minWidth: "100%!important" },
     ".min-w-full-screen": { minWidth: "100vw!important" },

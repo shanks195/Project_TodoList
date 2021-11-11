@@ -16,13 +16,13 @@ const PageUser = ()=> {
             <h1>LIST USER</h1>
             <Grid>
                 <Grid  container  >
-                    <Grid xs={2.5}>
+                    <Grid xs={3}>
                         <Search/>
                     </Grid>
-                    <Grid xs={2.5}>
+                    <Grid xs={3}>
                         <Sortby/>
                     </Grid>
-                    <Grid xs={6.9} >
+                    <Grid xs={5} >
                     <Add_user/>
                     </Grid>
                 </Grid>

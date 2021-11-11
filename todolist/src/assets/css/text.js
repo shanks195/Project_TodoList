@@ -2,6 +2,19 @@ import { makeStyles } from "@mui/styles";
 
 const textStyle = makeStyles(() => ({
   "@global": {
+    ".text-normal":{
+      fontSize:'16px',
+      fontWeight:"600!important",
+      textTransform:'uppercase',
+      color:'var(--primary-light)!important',
+      paddingBottom: "10px!important"
+    },
+    ".text-normal-title":{
+      fontSize:"30px",
+      fontWeight:"600!important",
+      textTransform:'uppercase',
+    },
+    ".text-upercase": {textTransform:'uppercase'},
     ".text-primary": { color: "var(--mscb-primary)" },
     ".text-secondary": { color: "var(--mscb-secondary)" },
     ".text-success": { color: "var(--mscb-success)" },
@@ -41,6 +54,11 @@ const textStyle = makeStyles(() => ({
     '.text-62': { fontSize: '62px!important' },
     '.text-72': { fontSize: '72px!important' },
     '.text-small': { fontSize: '0.8125rem!important' },
+    '.float-right': {
+      display:'inline-block',
+      float:'right',
+      paddingTop:20
+    }
   }
 })) ;
 
