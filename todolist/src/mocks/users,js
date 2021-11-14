@@ -1,0 +1,69 @@
+
+export default {
+    users: [
+        {
+          "id": uuidv4(),
+          "username": "admin",
+          "email": "robocon87@gmail.com",
+          "password": "T@an1995",
+          "avatar": "https://source.unsplash.com/random",
+          "phonenumber": "0902438743",
+          "firstName": "To",
+          "lastName": "Toan",
+          "birthDay": "11/12/1995",
+          "sex": "Male",
+          "role":1,
+          "createdAt": "2021-10-30 03:04:15",
+          "updatedAt": "2021-10-30 03:04:15",
+       
+        },
+        {
+          "id": uuidv4(),
+          "username": "customer 1",
+          "email": "robocon87@gmail.com",
+          "password": "T@an1995",
+          "avatar": "https://source.unsplash.com/random",
+          "phonenumber": "0902438743",
+          "firstName": "To",
+          "lastName": "Toan",
+          "birthDay": "11/12/1995",
+          "sex": "Male",
+          "role":2,
+          "createdAt": "2021-10-30 03:04:15",
+          "updatedAt": "2021-10-30 03:04:15",
+        
+        },
+        {
+            "id": uuidv4(),
+            "username": "poster",
+            "email": "robocon87@gmail.com",
+            "password": "T@an1995",
+            "avatar": "https://source.unsplash.com/random",
+            "phonenumber": "0902438743",
+            "firstName": "To",
+            "lastName": "Toan",
+            "birthDay": "11/12/1995",
+            "sex": "Male",
+            "role":3,
+            "createdAt": "2021-10-30 03:04:15",
+            "updatedAt": "2021-10-30 03:04:15",
+          
+          },
+          {
+            "id": uuidv4(),
+            "username": "customer 2",
+            "email": "robocon87@gmail.com",
+            "password": "T@an1995",
+            "avatar": "https://source.unsplash.com/random",
+            "phonenumber": "0902438743",
+            "firstName": "To",
+            "lastName": "Toan",
+            "birthDay": "11/12/1995",
+            "sex": "Male",
+            "role":2,
+            "createdAt": "2021-10-30 03:04:15",
+            "updatedAt": "2021-10-30 03:04:15",
+          
+          }
+      ],
+}

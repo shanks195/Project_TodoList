@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 import clsx from 'clsx';
 import TableUser from './TableUser/index';
 import PageUserStyle from './style';
@@ -8,16 +8,18 @@ import Sortby from '../../components/layout/Sortby';
 import Add_user from '../../components/layout/Add_user';
 import TablePaginationCo from '../../components/base/TablePaginationCo';
 
-const PageUser = ()=> {
-    const ClassStyle = PageUserStyle();
+const PageUser = (props)=> {
+    const {onClickSearchGo,onclickClearGo,items}=props;
     
+    const ClassStyle = PageUserStyle();
+   
     return(
         <div className={clsx(ClassStyle.root)}>
             <h1>LIST USER</h1>
             <Grid>
                 <Grid  container  >
                     <Grid xs={3}>
-                        <Search/>
+                        <Search onClickGo={onClickSearchGo} onclickGo={onclickClearGo} />
                     </Grid>
                     <Grid xs={3}>
                         <Sortby/>
@@ -27,7 +29,7 @@ const PageUser = ()=> {
                     </Grid>
                 </Grid>
                 <Grid xs={12}>
-                    <TableUser />
+                    <TableUser items={items}/>
                     <TablePaginationCo/>
                 </Grid>
             </Grid>

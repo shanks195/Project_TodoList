@@ -2,85 +2,20 @@ import * as React from 'react';
 import tableUserStyle from './style';
 import clsx from 'clsx';
 import Grid from '@mui/material/Grid';
-import { v4 as uuidv4 } from 'uuid';
-const TableUser = (props) => {
-    const ClassStyle = tableUserStyle();
-    // const {index} =props;
 
-    const dataTables =  [
-        {
-          "id": uuidv4(),
-          "username": "admin",
-          "email": "robocon87@gmail.com",
-          "password": "T@an1995",
-          "avatar": "https://source.unsplash.com/random",
-          "phonenumber": "0902438743",
-          "firstName": "To",
-          "lastName": "Toan",
-          "birthDay": "11/12/1995",
-          "sex": "Male",
-          "role":1,
-          "createdAt": "2021-10-30 03:04:15",
-          "updatedAt": "2021-10-30 03:04:15",
-       
-        },
-        {
-          "id": uuidv4(),
-          "username": "customer 1",
-          "email": "robocon87@gmail.com",
-          "password": "T@an1995",
-          "avatar": "https://source.unsplash.com/random",
-          "phonenumber": "0902438743",
-          "firstName": "To",
-          "lastName": "Toan",
-          "birthDay": "11/12/1995",
-          "sex": "Male",
-          "role":2,
-          "createdAt": "2021-10-30 03:04:15",
-          "updatedAt": "2021-10-30 03:04:15",
-        
-        },
-        {
-            "id": uuidv4(),
-            "username": "poster",
-            "email": "robocon87@gmail.com",
-            "password": "T@an1995",
-            "avatar": "https://source.unsplash.com/random",
-            "phonenumber": "0902438743",
-            "firstName": "To",
-            "lastName": "Toan",
-            "birthDay": "11/12/1995",
-            "sex": "Male",
-            "role":3,
-            "createdAt": "2021-10-30 03:04:15",
-            "updatedAt": "2021-10-30 03:04:15",
-          
-          },
-          {
-            "id": uuidv4(),
-            "username": "customer 2",
-            "email": "robocon87@gmail.com",
-            "password": "T@an1995",
-            "avatar": "https://source.unsplash.com/random",
-            "phonenumber": "0902438743",
-            "firstName": "To",
-            "lastName": "Toan",
-            "birthDay": "11/12/1995",
-            "sex": "Male",
-            "role":2,
-            "createdAt": "2021-10-30 03:04:15",
-            "updatedAt": "2021-10-30 03:04:15",
-          
-          }
-      ];
+const TableUser = (props) => {
+    const {index,items} =props;
+    const ClassStyle = tableUserStyle();
+    
     
 
-      const elmTable = dataTables.map((item,index) => 
-                <tbody key={index}>  
+
+      const elmTable = items.map((item,index) => 
+                <tbody key={index} item={item} >  
                                {(()=>{
                             let elmRule =
                             <tr  className='w-100 bg-primary-dark'>
-                                       <td>{index}</td>
+                                       <td>{index }</td>
                                     <td>
                                         <div class="user">
                                             <img src={item.avatar} alt="" />
