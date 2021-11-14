@@ -90,21 +90,22 @@ function App(props) {
     setStrSearch(value);
     console.log(setStrSearch);
   }
-   
-    // let elmForm = null;
-    // if(search.length > 0){
-    //   itemsOrigin.forEach((item) => {
-    //     if(item.name.toLowerCase().indexOf(search) !== -1) {
-    //       items.push(item);
-    //     }
-    // });
-    // }else {
-    //   items=itemsOrigin
-    // }
-  // const search =strSearch;
- console.log(items);
+   const search =strSearch;
+   const itemsOrigin= items;
+    
+    
+    if(search.length > 0){
+      itemsOrigin.forEach((item) => {
+        if(item.username.toLowerCase().indexOf(search) !== -1) {
+          items.push(item);
+        }
+    });
+    }else {
+      items=itemsOrigin
+    }
+    console.log(items);
   console.log('strSearch:',strSearch);
-
+ 
   return (
       <BrowserRouter>
         <ThemeProvider theme={theme} >
