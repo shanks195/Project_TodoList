@@ -9,8 +9,6 @@ import Dashboard from '../views/pages/Dashboard';
 import PageUser from '../views/pages/PageUser';
 import NotFound from '../views/pages/Notfound';
 import Navigate from './Navagate';
-import { v4 as uuidv4 } from 'uuid';
-// import users from '../mocks/users,js';
 
 import {
   BrowserRouter ,
@@ -20,9 +18,9 @@ import {
 } from "react-router-dom";
 import './style';
 function App(props) {
-  const  items= [
+  const  items=  [
     {
-      "id": uuidv4(),
+      "id": "uuidv4()",
       "username": "admin",
       "email": "robocon87@gmail.com",
       "password": "T@an1995",
@@ -38,7 +36,7 @@ function App(props) {
    
     },
     {
-      "id": uuidv4(),
+      "id": "uuidv4()",
       "username": "customer 1",
       "email": "robocon87@gmail.com",
       "password": "T@an1995",
@@ -54,7 +52,7 @@ function App(props) {
     
     },
     {
-        "id": uuidv4(),
+        "id": "uuidv4()",
         "username": "poster",
         "email": "robocon87@gmail.com",
         "password": "T@an1995",
@@ -70,7 +68,7 @@ function App(props) {
       
       },
       {
-        "id": uuidv4(),
+        "id": "uuidv4()",
         "username": "customer 2",
         "email": "robocon87@gmail.com",
         "password": "T@an1995",
@@ -85,7 +83,7 @@ function App(props) {
         "updatedAt": "2021-10-30 03:04:15",
       
       }
-  ]; 
+  ];
   const [strSearch,setStrSearch] = useState(" ");
   const ClassStyle=AppStyle();
   const handleSearch= (value)=> {
@@ -137,11 +135,14 @@ function App(props) {
                     </header>
                     <Grid spacing={2} className="main">
                         <Routes path="/" element={<Dashboard/>}>
-                          <Route path="/user" element={
+                          <Route path="/user"
+                          element={
                           <PageUser
                             items={items}
                             onClickSearchGo={handleSearch}
-                          />}/>      
+                          />
+                        }
+                          />      
                         </Routes>
                     </Grid>
                 </div>
